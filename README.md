@@ -10,8 +10,6 @@ Simple methods to test the browser's user agent string.
 
 ## Usage
 
-[todo]
-
 Include the script in your page:
 
 ``` html
