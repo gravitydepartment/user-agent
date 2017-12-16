@@ -13,13 +13,13 @@ Simple methods to test the browser's user agent string.
 Include the script in your page:
 
 ``` html
-<script src="path/to/gravdept.user-agent.min.js"></script>
+<script src="path/to/gravdept.user-agent.js"></script>
 ```
 
 And call the methods you need:
 
-``` javascript
-if (gravdept.isOldIos() || gravdept.isOldAndroid()) {
+``` js
+if (userAgent.isOldIos() || userAgent.isOldAndroid()) {
     // Warn users their browser is outdated.
 }
 ```
