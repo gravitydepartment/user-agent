@@ -13,7 +13,7 @@ Simple methods to test the browser's user agent string.
 Include the script in your page:
 
 ``` html
-<script src="path/to/gravdept.user-agent.js"></script>
+<script src="path/to/user-agent.js"></script>
 ```
 
 And call the methods you need:
