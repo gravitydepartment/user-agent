@@ -2,8 +2,8 @@
 * Gravity Department - User Agent
 * https://github.com/gravitydepartment/user-agent
 *
-* @author     Brendan Falkowski
-* @copyright  2017 Gravity Department. All rights reserved.
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
 */
 
 
