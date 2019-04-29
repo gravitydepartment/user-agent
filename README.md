@@ -1,8 +1,8 @@
+[![Gravity Department](https://cdn.gravitydept.com/github/repo-header.png)](https://gravitydept.com/)
+
 # GravDept User Agent
 
 Simple methods to test the browser's user agent string.
-
-[![Gravity Department](http://gravitydept.com/_themes/gravdept/img/logo-footer.png)](http://gravitydept.com/)
 
 ## Dependencies
 
