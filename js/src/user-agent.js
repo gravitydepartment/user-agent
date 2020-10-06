@@ -26,6 +26,17 @@ var userAgent = {
     },
 
     // ----------------------------------------------
+    // Detect Edge
+
+    isEdgeWithEdgeHtml: function () {
+        return /edge/.test(this.ua);
+    },
+
+    isEdgeWithChromium: function () {
+        return (/edg/.test(this.ua) && !this.isEdgeWithEdgeHtml());
+    },
+
+    // ----------------------------------------------
     // Detect IE
 
     isIe: function () {
@@ -82,6 +93,13 @@ var userAgent = {
 
     // ----------------------------------------------
     // Detect unsupported operating systems
+
+    // Old Edge
+    isOldEdge: function () {
+        return (
+            this.isEdgeWithEdgeHtml()
+        ) ? true : false;
+    },
 
     // Old IE
     isOldIe: function () {
@@ -141,6 +159,9 @@ userAgent.init();
 
 // 13
 // userAgent.set('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586');
+
+// 85
+// userAgent.set('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.68');
 
 // ----------------------------------------------
 // IE
