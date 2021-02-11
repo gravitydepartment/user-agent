@@ -63,6 +63,11 @@ var userAgent = {
         return /iphone|ipod|ipad/.test(this.ua);
     },
 
+    // iPadOS
+    isIpados: function () {
+        return (/macintosh/.test(this.ua) && this.supportsTouchPoints()) ? true : false;
+    },
+
     // Safari
     isSafari: function () {
         return /safari/.test(this.ua);
@@ -71,6 +76,10 @@ var userAgent = {
     // Standalone (iOS full screen mode)
     isIosStandalone: function () {
         return (typeof window.navigator.standalone !== 'undefined') ? window.navigator.standalone : false;
+    },
+
+    supportsTouchPoints: function () {
+        return (window.navigator && window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2) ? true : false;
     },
 
     // ----------------------------------------------
@@ -180,3 +189,12 @@ userAgent.init();
 
 // 10
 // userAgent.set('Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.3 (KHTML, like Gecko) Version/10.0 Mobile/14D15 Safari/602.1');
+
+// ----------------------------------------------
+// iPadOS
+
+// 12
+// userAgent.set('Mozilla/5.0 (iPad; CPU OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1 Mobile/15E148 Safari/604.1');
+
+// 13
+// userAgent.set('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.1 Safari/605.1.15');
